@@ -1,0 +1,109 @@
+.config-panel {
+  width: 100%;
+  max-width: 16rem;
+  flex: 0 0 16rem;
+}
+
+@media (max-width: 900px) {
+  .config-panel {
+    flex: none;
+    max-width: 32rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.config-title {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.config-loading {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+}
+
+.config-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.config-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.config-field-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.config-field-hint {
+  font-size: 0.65rem;
+  color: #aaa;
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+.config-field-note {
+  font-size: 0.7rem;
+  color: #999;
+  line-height: 1.4;
+}
+
+.config-field-warning {
+  font-size: 0.7rem;
+  color: #a13d2d;
+  background: #fdecea;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.3rem;
+  line-height: 1.4;
+}
+
+.config-field-warning code {
+  font-family: ui-monospace, Consolas, monospace;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.config-field input {
+  font-size: 0.9rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+
+.config-form button {
+  font-size: 0.85rem;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.config-form button[type="submit"] {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.config-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.config-form button.config-reset {
+  background: transparent;
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+.config-status {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #3b5bfd;
+}

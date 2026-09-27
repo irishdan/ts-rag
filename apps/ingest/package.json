@@ -1,0 +1,29 @@
+{
+  "name": "@ts-rag/ingest",
+  "version": "1.0.0",
+  "description": "Offline data ingestion pipeline (fetch, clean, chunk, embed, upsert into Qdrant)",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/server.ts",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
+    "populate": "ts-node src/populate.ts",
+    "lint": "eslint 'src/**/*.ts'"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0",
+    "@qdrant/js-client-rest": "^1.19.0",
+    "@ts-rag/embeddings": "*",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.3",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}

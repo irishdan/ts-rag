@@ -1,0 +1,41 @@
+{
+  "name": "ts-rag",
+  "version": "1.0.0",
+  "description": "RAG example monorepo — see apps/api, apps/ingest, apps/frontend, packages/embeddings",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @ts-rag/embeddings && npm run build -w @ts-rag/api -w @ts-rag/ingest -w @ts-rag/frontend",
+    "lint": "npm run lint --workspaces --if-present",
+    "dev": "npm run build -w @ts-rag/embeddings && concurrently -n api,ingest,frontend -c blue,green,magenta \"npm run dev -w @ts-rag/api\" \"npm run dev -w @ts-rag/ingest\" \"npm run dev -w @ts-rag/frontend\"",
+    "dev:api": "npm run build -w @ts-rag/embeddings && npm run dev -w @ts-rag/api",
+    "dev:frontend": "npm run dev -w @ts-rag/frontend",
+    "dev:ingest": "npm run build -w @ts-rag/embeddings && npm run dev -w @ts-rag/ingest",
+    "start": "npm run build -w @ts-rag/embeddings && npm run build -w @ts-rag/api && npm run start -w @ts-rag/api",
+    "start:ingest": "npm run build -w @ts-rag/embeddings && npm run build -w @ts-rag/ingest && npm run start -w @ts-rag/ingest",
+    "preload": "npm run build -w @ts-rag/embeddings && npm run preload -w @ts-rag/api",
+    "populate": "npm run build -w @ts-rag/embeddings && npm run populate -w @ts-rag/ingest"
+  },
+  "author": "dan byrne <danielbyrne@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.3",
+    "@typescript-eslint/eslint-plugin": "^8.70.1",
+    "@typescript-eslint/parser": "^8.70.1",
+    "concurrently": "^9.1.2",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.1"
+  }
+}

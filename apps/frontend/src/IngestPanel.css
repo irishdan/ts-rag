@@ -1,0 +1,79 @@
+.ingest-panel {
+  width: 100%;
+}
+
+.ingest-title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.ingest-description {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.ingest-description code {
+  font-family: ui-monospace, Consolas, monospace;
+  background: #f4f4f4;
+  padding: 0 0.25rem;
+  border-radius: 0.2rem;
+}
+
+.ingest-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ingest-panel button,
+.ingest-secondary-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+}
+
+.ingest-panel button {
+  background: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ingest-panel button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ingest-secondary-button {
+  border-color: #ccc;
+  background: transparent;
+  color: #666;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ingest-result {
+  margin: 0.6rem 0 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.ingest-success {
+  background: #f0f4ff;
+  color: #1a1a2e;
+}
+
+.ingest-error {
+  background: #fdecea;
+  color: #611a15;
+}

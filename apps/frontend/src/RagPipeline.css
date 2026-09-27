@@ -1,0 +1,163 @@
+.pipeline {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pipeline-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.pipeline-title {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.pipeline-total-duration {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3b5bfd;
+}
+
+.pipeline-meta {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 0.4rem;
+}
+
+.pipeline-stage {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.pipeline-stage-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 1rem;
+}
+
+.pipeline-stage-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  margin-top: 0.35rem;
+  background: #ccc;
+  flex-shrink: 0;
+}
+
+.pipeline-stage-line {
+  flex: 1;
+  width: 2px;
+  background: #ddd;
+  margin: 0.15rem 0;
+}
+
+.pipeline-stage-body {
+  flex: 1;
+  padding-bottom: 1.25rem;
+  min-width: 0;
+}
+
+.pipeline-stage-body h3 {
+  margin: 0.15rem 0 0.4rem;
+  font-size: 0.95rem;
+  color: #999;
+}
+
+.pipeline-stage--active .pipeline-stage-dot {
+  background: #1a1a1a;
+  box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.15);
+  animation: pipeline-pulse 1.2s ease-in-out infinite;
+}
+
+.pipeline-stage--active .pipeline-stage-body h3 {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.pipeline-stage--done .pipeline-stage-dot {
+  background: #3b5bfd;
+}
+
+.pipeline-stage--done .pipeline-stage-body h3 {
+  color: #1a1a2e;
+}
+
+.pipeline-stage--error .pipeline-stage-dot {
+  background: #c0392b;
+}
+
+.pipeline-stage--error .pipeline-stage-body h3 {
+  color: #611a15;
+}
+
+.pipeline-stage--pending .pipeline-stage-body h3 {
+  color: #bbb;
+}
+
+@keyframes pipeline-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(26, 26, 26, 0.08);
+  }
+}
+
+.pipeline-field {
+  margin-bottom: 0.5rem;
+}
+
+.pipeline-field-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #999;
+  margin-bottom: 0.15rem;
+}
+
+.pipeline-field p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #333;
+  white-space: pre-wrap;
+}
+
+.pipeline-pending {
+  color: #999 !important;
+  font-style: italic;
+}
+
+.pipeline-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+  color: #333;
+  max-height: 10rem;
+  overflow-y: auto;
+}
+
+.pipeline-list li {
+  margin-bottom: 0.25rem;
+}
+
+.pipeline-chunks {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pipeline-chunk-source {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #3b5bfd;
+  margin-right: 0.3rem;
+}

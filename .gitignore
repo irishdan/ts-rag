@@ -1,0 +1,12 @@
+.env
+.idea
+
+node_modules
+dist
+
+# Lockfiles aren't committed — any package manager works, each generates its own.
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lock
+bun.lockb

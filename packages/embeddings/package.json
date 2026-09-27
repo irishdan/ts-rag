@@ -1,0 +1,19 @@
+{
+  "name": "@ts-rag/embeddings",
+  "version": "1.0.0",
+  "description": "Shared embedding model wrapper, used at both ingest time and query time",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint 'src/**/*.ts'"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "typescript": "^6.0.3"
+  }
+}
